@@ -1,4 +1,6 @@
+import os
 import logging
+import dotenv
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from telegram import Update
@@ -12,8 +14,10 @@ from telegram.ext import (
 
 logging.basicConfig(level="INFO")
 
+dotenv.load_dotenv()
+
 # Replace 'YOUR_BOT_TOKEN' with your actual Telegram bot token
-TOKEN = "8036979597:AAHnS3TCK2A6YcYe6I6q8HnKpsGd0uFxGWE"
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 # Load deepseek model and tokenizer (small model for efficiency)
 # MODEL_NAME = "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
