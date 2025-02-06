@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "noboty"
+version = "0.1.0"
+description = ""
+authors = ["Pablo Reynel <pablo.reynel@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-telegram-bot = "^21.10"
+transformers = "^4.48.2"
+torch = "^2.6.0"
+accelerate = "^1.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
